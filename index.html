@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Simulador Gravedad</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    
+</head>
+
+<body class="fondo" id="page-top">
+
+
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Simulador</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#portfolio">Seleccion Planetas</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#about">Simulador</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <!-- Portfolio Section-->
+    <header class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Planetas</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line text-secondary mb-0"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" onclick="simulacion('luna')">
+                        <h3 class="text-white">La luna</h3>
+                        <img class="img-fluid" src="assets/img/imagenesbtn/Luna.jpg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5" onclick="simulacion('jupiter')">
+                    <div class="portfolio-item mx-auto">
+                        <h3 class="text-white">Jupiter</h3>
+                        <img class="img-fluid" src="assets/img/imagenesbtn/Jupiter.jpg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5" onclick="simulacion('marte')">
+                    <div class="portfolio-item mx-auto">
+                        <h3 class="text-white">Marte</h3>
+                        <img class="img-fluid" src="assets/img/imagenesbtn/Marte.jpg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 4-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 " onclick="simulacion('mercurio')">
+                    <div class="portfolio-item mx-auto">
+                        <h3 class="text-white">Mercurio</h3>
+                        <img class="img-fluid" src="assets/img/imagenesbtn/Mercurio.jpg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 5-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0" onclick="simulacion('saturno')">
+                    <div class="portfolio-item mx-auto">
+                        <h3 class="text-white">Saturno</h3>
+                        <img class="img-fluid" src="assets/img/imagenesbtn/Saturno.jpg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 6-->
+                <div class="col-md-6 col-lg-4" onclick="simulacion('tierra')">
+                    <div class="portfolio-item mx-auto">
+                        <h3 class="text-white">Tierra</h3>
+                        <img class="img-fluid" src="assets/img/imagenesbtn/Tierra.jpg" alt="..." />
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button id="restartButton" class="btn btn-xl btn-outline-light" data-bs-toggle="modal"
+                        data-bs-target="#portfolioModal1">Agregar gravedad</button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ingresar valor</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="Valor" type="text" placeholder="Valor"
+                                        data-sb-validations="required" />
+                                    <label for="valor">Valor</label>
+                                    <div class="invalid-feedback" data-sb-feedback="valor:required">Un valor es
+                                        requerido.
+                                    </div>
+                                </div>
+                                <!-- Portfolio Modal - Text-->
+                                <button class="btn btn-primary" id="submitButton" type="submit">Send</button>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Section-->
+    <section id="about">
+        <div class="container">
+
+
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Simulacion</h2>
+            <!-- Icon Divider-->
+
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line text-secondary mb-0"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <center>
+                <div id="container">
+                    <img id="object" src="assets/img/portfolio/martillo.webp" alt="Imagen de objeto">
+
+                </div>
+            </center>
+            <h2 class="page-section-heading text-center text-uppercase text-white mb-0" id="titulo">Gravedad: </h2>
+
+
+            <!-- About Section Button-->
+            <div class="text-center mt-4">
+                <button id="restartButton" class="btn btn-xl btn-outline-light" onclick="reiniciar()">Reiniciar</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+   
+</body>
+
+
+</html>

@@ -1,0 +1,11 @@
+{
+    "name": "Simulador",
+    "version": "1.0.0",
+    "description": "Simulador gravedad",
+    "manifest_version": 3,
+    "author": "Jairo Quiroga",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Simlation"
+    }
+}
